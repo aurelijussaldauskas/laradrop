@@ -1,9 +1,9 @@
 <?php
 
-namespace Jasekz\Laradrop\Services;
+namespace AurelijusSaldauskas\Laradrop\Services;
 
-use Jasekz\Laradrop\Models\File as FileModel;
-use Jasekz\Laradrop\Events\FileWasDeleted;
+use AurelijusSaldauskas\Laradrop\Models\File as FileModel;
+use AurelijusSaldauskas\Laradrop\Events\FileWasDeleted;
 
 class File extends FileModel
 {

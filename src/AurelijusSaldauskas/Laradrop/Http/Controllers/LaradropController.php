@@ -1,6 +1,6 @@
 <?php
 
-namespace Jasekz\Laradrop\Http\Controllers;
+namespace AurelijusSaldauskas\Laradrop\Http\Controllers;
 
 use Exception;
 use Illuminate\Support\Facades\Request;
@@ -8,8 +8,8 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\ImageManagerStatic as Image;
-use Jasekz\Laradrop\Events\FileWasUploaded;
-use Jasekz\Laradrop\Services\File as FileService;
+use AurelijusSaldauskas\Laradrop\Events\FileWasUploaded;
+use AurelijusSaldauskas\Laradrop\Services\File as FileService;
 
 class LaradropController extends BaseController
 {

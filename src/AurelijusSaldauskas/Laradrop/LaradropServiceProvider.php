@@ -1,6 +1,6 @@
 <?php
 
-namespace Jasekz\Laradrop;
+namespace AurelijusSaldauskas\Laradrop;
 
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,8 +13,8 @@ class LaradropServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'Jasekz\Laradrop\Events\FileWasDeleted' => [
-            'Jasekz\Laradrop\Handlers\Events\DeleteFile',
+        'AurelijusSaldauskas\Laradrop\Events\FileWasDeleted' => [
+            'AurelijusSaldauskas\Laradrop\Handlers\Events\DeleteFile',
         ],
     ];
 
@@ -46,7 +46,7 @@ class LaradropServiceProvider extends ServiceProvider
         ], 'migrations');
 
         $this->publishes([
-            __DIR__ . '/resources/assets' => public_path('vendor/jasekz/laradrop')
+            __DIR__ . '/resources/assets' => public_path('vendor/aurelijussaldauskas/laradrop')
         ], 'public');
 
         $this->loadViewsFrom(__DIR__ . '/resources/views', 'laradrop');

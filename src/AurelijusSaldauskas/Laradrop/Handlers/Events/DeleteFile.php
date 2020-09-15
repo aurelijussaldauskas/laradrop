@@ -1,10 +1,10 @@
 <?php
 
-namespace Jasekz\Laradrop\Handlers\Events;
+namespace AurelijusSaldauskas\Laradrop\Handlers\Events;
 
 use Exception;
 use Illuminate\Support\Facades\Storage;
-use Jasekz\Laradrop\Events\FileWasDeleted;
+use AurelijusSaldauskas\Laradrop\Events\FileWasDeleted;
 
 class DeleteFile
 {

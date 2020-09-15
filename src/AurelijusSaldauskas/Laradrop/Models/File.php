@@ -1,6 +1,6 @@
 <?php
 
-namespace Jasekz\Laradrop\Models;
+namespace AurelijusSaldauskas\Laradrop\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -37,6 +37,6 @@ class File extends Model
      */
     public function children()
     {
-        return $this->hasMany('Jasekz\Laradrop\Models\File', 'parent_id');
+        return $this->hasMany('AurelijusSaldauskas\Laradrop\Models\File', 'parent_id');
     }
 }

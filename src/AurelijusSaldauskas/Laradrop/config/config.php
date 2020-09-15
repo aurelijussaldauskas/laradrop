@@ -11,7 +11,7 @@ return [
     'thumb_dimensions' => ['width' => env('LARADROP_THUMB_WIDTH', 150), 'height' => env('LARADROP_THUMB_HEIGHT', 150)],
 
     // default thumbnail (if one can not be generated)
-    'default_thumbnail_url' => env('LARADROP_DEFAULT_THUMB', '/vendor/jasekz/laradrop/img/genericThumbs/no-thumb.png'),
+    'default_thumbnail_url' => env('LARADROP_DEFAULT_THUMB', '/vendor/aurelijussaldauskas/laradrop/img/genericThumbs/no-thumb.png'),
 
     // storage location - use config/filesystems.php 'disks'
     'disk' => env('LARADROP_DISK', 'local'),

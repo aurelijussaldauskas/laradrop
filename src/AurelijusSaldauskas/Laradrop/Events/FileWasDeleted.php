@@ -1,10 +1,10 @@
 <?php
 
-namespace Jasekz\Laradrop\Events;
+namespace AurelijusSaldauskas\Laradrop\Events;
 
 use Illuminate\Queue\SerializesModels;
 
-class FileWasUploaded extends Event
+class FileWasDeleted extends Event
 {
     use SerializesModels;
 

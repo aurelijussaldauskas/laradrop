@@ -24,12 +24,12 @@ Here's an 4 step process to get a fully functional demo, similar to http://larad
     <head>
         <title>Laradrop Demo</title>
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <link href="/vendor/jasekz/laradrop/css/styles.css" rel="stylesheet" type="text/css">
+        <link href="/vendor/aurelijussaldauskas/laradrop/css/styles.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js" ></script>
-        <script src="/vendor/jasekz/laradrop/js/enyo.dropzone.js"></script>
-        <script src="/vendor/jasekz/laradrop/js/laradrop.js"></script>
+        <script src="/vendor/aurelijussaldauskas/laradrop/js/enyo.dropzone.js"></script>
+        <script src="/vendor/aurelijussaldauskas/laradrop/js/laradrop.js"></script>
     </head>
     <body>
         <div class="laradrop" laradrop-csrf-token="{{ csrf_token() }}"> </div>
@@ -63,12 +63,12 @@ NOTE: If you haven't set up a database yet for your app, please do that first as
 
 Via composer
 ```
-composer require jasekz/laradrop
+composer require aurelijussaldauskas/laradrop
 ```
 
 Then in your `config/app.php` add 
 ```php
-    'Jasekz\Laradrop\LaradropServiceProvider'
+    'AurelijusSaldauskas\Laradrop\LaradropServiceProvider'
 ```    
 to the `providers` array.
 
@@ -92,7 +92,7 @@ LARADROP_DISK=local
 # If your files need to be web accessible, set this param.  S3, for example, would be 'https://s3.amazonaws.com/my-bucket'.  Defaults to the web root (public).
 LARADROP_DISK_PUBLIC_URL=/img 
 
-# If a thumbnail can not be generated due to incompatible file or any other reason, what image do you want to use? Defaults to 'vendor/jasekz/laradrop/img/genericThumbs/no-thumb.png'
+# If a thumbnail can not be generated due to incompatible file or any other reason, what image do you want to use? Defaults to 'vendor/aurelijussaldauskas/laradrop/img/genericThumbs/no-thumb.png'
 LARADROP_DEFAULT_THUMB=/img/no-thumb.png
 
 # Max file upload size in MB.  Defaults to 10.
@@ -115,14 +115,14 @@ This package requires Dropzone.js, jQuery, and jQuery UI.  Include these somewhe
 ``` php
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js" ></script>
-<script src="/vendor/jasekz/laradrop/js/enyo.dropzone.js"></script>
-<script src="/vendor/jasekz/laradrop/js/laradrop.js"></script>
+<script src="/vendor/aurelijussaldauskas/laradrop/js/enyo.dropzone.js"></script>
+<script src="/vendor/aurelijussaldauskas/laradrop/js/laradrop.js"></script>
 ```
 
 By default, Laradrop is designed for Bootstrap, but it's not a requirement.  Include Bootstrap and the Laradrop styles if you'd like to use it:
 ``` php
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<link href="/vendor/jasekz/laradrop/css/styles.css" rel="stylesheet" type="text/css">
+<link href="/vendor/aurelijussaldauskas/laradrop/css/styles.css" rel="stylesheet" type="text/css">
 ```
 
 
@@ -161,8 +161,8 @@ jQuery(document).ready(function(){
 ## Events
 Laradrop currently fires two events:
 
-1. **Jasekz\Laradrop\Events\FileWasUploaded** - this is fired after a file has been uploaded and saved.
-2. **Jasekz\Laradrop\Events\FileWasDeleted** - this is fired after a file is deleted.
+1. **AurelijusSaldauskas\Laradrop\Events\FileWasUploaded** - this is fired after a file has been uploaded and saved.
+2. **AurelijusSaldauskas\Laradrop\Events\FileWasDeleted** - this is fired after a file is deleted.
 
 ## Handlers (upload, delete, list, etc)
 If you'd like to implement your own hanldlers (or extend the existing ones with your own controllers), you can do so.  All you need to do, is to defined the routes to the appropriate handlers in the button attributes.  This also allows you to easily have multiple handlers for different use cases, if so desired.
